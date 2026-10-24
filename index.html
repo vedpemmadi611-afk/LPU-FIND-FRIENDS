@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101322">
+  <title>LinkUp — Meet people, share ideas</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-mark">✦</span> LinkUp</a>
+    <span class="privacy-pill"><i></i> Temporary chat</span>
+  </header>
+  <main class="layout">
+    <section class="hero">
+      <p class="eyebrow">YOUR NEXT CONVERSATION STARTS HERE</p>
+      <h1>Good people.<br><span>New possibilities.</span></h1>
+      <p class="subhead">Meet someone new, find a teammate, or turn an idea into something real.</p>
+    </section>
+    <section class="category-section" aria-labelledby="category-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">PICK YOUR VIBE</p><h2 id="category-title">Who would you like to meet?</h2></div>
+        <span class="small-note">Choose a category to start</span>
+      </div>
+      <div class="category-grid">
+        <button class="category-card" data-category="friends"><span class="emoji">🫶</span><span class="card-title">Friends</span><span class="card-copy">Meet new people</span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="hackathon"><span class="emoji">💻</span><span class="card-title">Hackathon partner</span><span class="card-copy">Build something brilliant</span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="roommate"><span class="emoji">🏡</span><span class="card-title">Room partner</span><span class="card-copy">Find a potential roommate</span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="gaming"><span class="emoji">🎮</span><span class="card-title">Gaming teammate</span><span class="card-copy">Find your next squad</span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="relationship"><span class="emoji">💬</span><span class="card-title">Relationship talk</span><span class="card-copy">Talk respectfully</span><span class="arrow">↗</span></button>
+        <button class="category-card" data-category="projects"><span class="emoji">🚀</span><span class="card-title">Project teammate</span><span class="card-copy">Create, learn, collaborate</span><span class="arrow">↗</span></button>
+      </div>
+    </section>
+    <section class="chat-panel" id="chat-panel" aria-live="polite">
+      <div class="chat-top">
+        <div class="chat-person"><div class="avatar">✦</div><div><h2 id="chat-title">Your chat</h2><p id="chat-status">Connecting to server…</p></div></div>
+        <button class="text-button" id="leave-btn" disabled>Leave chat</button>
+      </div>
+      <div class="notice" id="notice">Connecting to the chat server…</div>
+      <div class="messages" id="messages"><div class="empty-state"><span>✧</span><strong>Your conversation starts here</strong><p>Choose a category and get connected.</p></div></div>
+      <form class="composer" id="chat-form">
+        <input id="message-input" maxlength="500" placeholder="Connect to a partner to send a message…" autocomplete="off" disabled>
+        <button id="send-btn" type="submit" disabled>Send <span>↗</span></button>
+      </form>
+      <div class="chat-foot"><span>Be kind. Never share passwords, private addresses, or financial details.</span><button id="report-btn" disabled>Report & leave</button></div>
+    </section>
+    <footer>Messages live in server memory only · Be thoughtful and stay safe online.</footer>
+  </main>
+</body>
+</html>
